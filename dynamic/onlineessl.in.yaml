@@ -1,0 +1,4570 @@
+# onlineessl.in — 326 tenant subdomains proxied to 172.22.66.10
+# Auto-generated from onlineessl_subdomain_ports.xlsx
+# Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
+http:
+  routers:
+    demo:
+      rule: "Host(`demo.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: demo-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ghk:
+      rule: "Host(`ghk.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ghk-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dbt:
+      rule: "Host(`dbt.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dbt-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kmh:
+      rule: "Host(`kmh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kmh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nxtspire:
+      rule: "Host(`nxtspire.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nxtspire-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sls:
+      rule: "Host(`sls.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sls-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    eaiia:
+      rule: "Host(`eaiia.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: eaiia-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    exla:
+      rule: "Host(`exla.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: exla-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    thefs:
+      rule: "Host(`thefs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: thefs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kjsck:
+      rule: "Host(`kjsck.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kjsck-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ashablue:
+      rule: "Host(`ashablue.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ashablue-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    scpgirls:
+      rule: "Host(`scpgirls.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: scpgirls-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    oriocci:
+      rule: "Host(`oriocci.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: oriocci-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    anubhavconst:
+      rule: "Host(`anubhavconst.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: anubhavconst-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    one8gym:
+      rule: "Host(`one8gym.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: one8gym-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rlmedio:
+      rule: "Host(`rlmedio.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rlmedio-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    armyschool:
+      rule: "Host(`armyschool.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: armyschool-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rmrssachiv:
+      rule: "Host(`rmrssachiv.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rmrssachiv-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lightbook:
+      rule: "Host(`lightbook.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lightbook-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    globalindia:
+      rule: "Host(`globalindia.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: globalindia-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pratiksci:
+      rule: "Host(`pratiksci.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pratiksci-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    financepoint:
+      rule: "Host(`financepoint.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: financepoint-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ondesk:
+      rule: "Host(`ondesk.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ondesk-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    akshayeng:
+      rule: "Host(`akshayeng.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: akshayeng-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    krj:
+      rule: "Host(`krj.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: krj-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    natwest:
+      rule: "Host(`natwest.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: natwest-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    iss:
+      rule: "Host(`iss.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: iss-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    helpdeskfin:
+      rule: "Host(`helpdeskfin.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: helpdeskfin-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    avmhospital:
+      rule: "Host(`avmhospital.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: avmhospital-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jamiatul:
+      rule: "Host(`jamiatul.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jamiatul-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    winpet:
+      rule: "Host(`winpet.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: winpet-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    fmr:
+      rule: "Host(`fmr.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: fmr-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    swanson:
+      rule: "Host(`swanson.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: swanson-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    thinkbig:
+      rule: "Host(`thinkbig.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: thinkbig-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dgdigital:
+      rule: "Host(`dgdigital.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dgdigital-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vidyasankalp:
+      rule: "Host(`vidyasankalp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vidyasankalp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aphtech:
+      rule: "Host(`aphtech.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aphtech-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tectra:
+      rule: "Host(`tectra.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tectra-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pk:
+      rule: "Host(`pk.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pk-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    teclowin:
+      rule: "Host(`teclowin.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: teclowin-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    somayafash:
+      rule: "Host(`somayafash.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: somayafash-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    faucon:
+      rule: "Host(`faucon.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: faucon-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ois:
+      rule: "Host(`ois.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ois-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bfm:
+      rule: "Host(`bfm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bfm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    fashosiery:
+      rule: "Host(`fashosiery.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: fashosiery-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    saarpharma:
+      rule: "Host(`saarpharma.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: saarpharma-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    meehosp:
+      rule: "Host(`meehosp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: meehosp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    domin8:
+      rule: "Host(`domin8.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: domin8-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    elite:
+      rule: "Host(`elite.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: elite-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    srilakshmi:
+      rule: "Host(`srilakshmi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srilakshmi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ismo:
+      rule: "Host(`ismo.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ismo-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    park:
+      rule: "Host(`park.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: park-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vmc:
+      rule: "Host(`vmc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vmc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sangharsh:
+      rule: "Host(`sangharsh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sangharsh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bloomsolve:
+      rule: "Host(`bloomsolve.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bloomsolve-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    voiceetc:
+      rule: "Host(`voiceetc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: voiceetc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rishi:
+      rule: "Host(`rishi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rishi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    edujam:
+      rule: "Host(`edujam.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: edujam-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    techpoint:
+      rule: "Host(`techpoint.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: techpoint-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    niti:
+      rule: "Host(`niti.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: niti-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    prism:
+      rule: "Host(`prism.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: prism-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    gazebo:
+      rule: "Host(`gazebo.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: gazebo-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ctc:
+      rule: "Host(`ctc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ctc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    malabar:
+      rule: "Host(`malabar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: malabar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    railwire:
+      rule: "Host(`railwire.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: railwire-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    alpro:
+      rule: "Host(`alpro.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: alpro-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    purechem:
+      rule: "Host(`purechem.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: purechem-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rosea:
+      rule: "Host(`rosea.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rosea-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    calids:
+      rule: "Host(`calids.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: calids-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rrg:
+      rule: "Host(`rrg.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rrg-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wtf:
+      rule: "Host(`wtf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wtf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    juza:
+      rule: "Host(`juza.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: juza-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dxn:
+      rule: "Host(`dxn.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dxn-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pallavi:
+      rule: "Host(`pallavi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pallavi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bbl:
+      rule: "Host(`bbl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bbl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ssm:
+      rule: "Host(`ssm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ssm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    shloka:
+      rule: "Host(`shloka.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shloka-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pj:
+      rule: "Host(`pj.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pj-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ves:
+      rule: "Host(`ves.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ves-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sadguru:
+      rule: "Host(`sadguru.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sadguru-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    drkv:
+      rule: "Host(`drkv.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: drkv-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    miku:
+      rule: "Host(`miku.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: miku-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    plus91:
+      rule: "Host(`plus91.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: plus91-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    standesign:
+      rule: "Host(`standesign.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: standesign-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    harshraj:
+      rule: "Host(`harshraj.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: harshraj-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bblokha:
+      rule: "Host(`bblokha.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bblokha-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bblhapa:
+      rule: "Host(`bblhapa.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bblhapa-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tulua:
+      rule: "Host(`tulua.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tulua-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    maeyes:
+      rule: "Host(`maeyes.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: maeyes-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    santosh:
+      rule: "Host(`santosh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: santosh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dsi:
+      rule: "Host(`dsi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dsi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rush:
+      rule: "Host(`rush.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rush-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    m2:
+      rule: "Host(`m2.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: m2-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bblrajkot:
+      rule: "Host(`bblrajkot.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bblrajkot-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    t-rex:
+      rule: "Host(`t-rex.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: t-rex-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    gyansagar:
+      rule: "Host(`gyansagar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: gyansagar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bluestar:
+      rule: "Host(`bluestar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bluestar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tenbkc:
+      rule: "Host(`tenbkc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tenbkc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sass-udaipur:
+      rule: "Host(`sass-udaipur.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sass-udaipur-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nds:
+      rule: "Host(`nds.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nds-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    omdisplay:
+      rule: "Host(`omdisplay.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: omdisplay-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    croxoil:
+      rule: "Host(`croxoil.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: croxoil-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    msf:
+      rule: "Host(`msf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: msf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    asm:
+      rule: "Host(`asm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: asm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vgs:
+      rule: "Host(`vgs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vgs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tves:
+      rule: "Host(`tves.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tves-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skeng:
+      rule: "Host(`skeng.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skeng-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sarojani:
+      rule: "Host(`sarojani.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sarojani-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dd:
+      rule: "Host(`dd.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dd-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    toe:
+      rule: "Host(`toe.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: toe-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    alenco:
+      rule: "Host(`alenco.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: alenco-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hi-tech:
+      rule: "Host(`hi-tech.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hi-tech-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hitech:
+      rule: "Host(`hitech.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hitech-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wooreedle:
+      rule: "Host(`wooreedle.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wooreedle-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tydoc:
+      rule: "Host(`tydoc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tydoc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    madhava:
+      rule: "Host(`madhava.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: madhava-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tdc:
+      rule: "Host(`tdc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tdc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ks:
+      rule: "Host(`ks.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ks-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rotoline:
+      rule: "Host(`rotoline.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rotoline-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sjp:
+      rule: "Host(`sjp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sjp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    milan:
+      rule: "Host(`milan.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: milan-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ksm:
+      rule: "Host(`ksm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ksm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aais:
+      rule: "Host(`aais.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aais-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    edujam-dadar:
+      rule: "Host(`edujam-dadar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: edujam-dadar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sandeepani:
+      rule: "Host(`sandeepani.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sandeepani-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wellness:
+      rule: "Host(`wellness.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wellness-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ghv:
+      rule: "Host(`ghv.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ghv-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dyna:
+      rule: "Host(`dyna.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dyna-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tvm:
+      rule: "Host(`tvm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tvm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    spl:
+      rule: "Host(`spl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aqua-borivali:
+      rule: "Host(`aqua-borivali.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aqua-borivali-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aqua-kandivali:
+      rule: "Host(`aqua-kandivali.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aqua-kandivali-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dvipa:
+      rule: "Host(`dvipa.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dvipa-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    edujam-thane:
+      rule: "Host(`edujam-thane.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: edujam-thane-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aashvi:
+      rule: "Host(`aashvi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aashvi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rainforest:
+      rule: "Host(`rainforest.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rainforest-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rk:
+      rule: "Host(`rk.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rk-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sfs:
+      rule: "Host(`sfs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sfs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vmi:
+      rule: "Host(`vmi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vmi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jf:
+      rule: "Host(`jf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    s2:
+      rule: "Host(`s2.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: s2-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    uprio:
+      rule: "Host(`uprio.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: uprio-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rkd:
+      rule: "Host(`rkd.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rkd-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kimsh:
+      rule: "Host(`kimsh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kimsh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    brandworks:
+      rule: "Host(`brandworks.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: brandworks-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ie:
+      rule: "Host(`ie.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ie-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    transpack:
+      rule: "Host(`transpack.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: transpack-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lakhans:
+      rule: "Host(`lakhans.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lakhans-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    fce:
+      rule: "Host(`fce.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: fce-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    velloils:
+      rule: "Host(`velloils.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: velloils-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    altiuz:
+      rule: "Host(`altiuz.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: altiuz-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nzi:
+      rule: "Host(`nzi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nzi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    cca:
+      rule: "Host(`cca.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: cca-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    awch:
+      rule: "Host(`awch.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: awch-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    eonmatrix:
+      rule: "Host(`eonmatrix.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: eonmatrix-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    premjyot:
+      rule: "Host(`premjyot.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: premjyot-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ppp:
+      rule: "Host(`ppp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ppp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    autotronix:
+      rule: "Host(`autotronix.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: autotronix-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pssp:
+      rule: "Host(`pssp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pssp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    itology:
+      rule: "Host(`itology.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: itology-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bhc:
+      rule: "Host(`bhc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bhc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bloom:
+      rule: "Host(`bloom.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bloom-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pujashoppee:
+      rule: "Host(`pujashoppee.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pujashoppee-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    eyeqtech:
+      rule: "Host(`eyeqtech.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: eyeqtech-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    triant:
+      rule: "Host(`triant.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: triant-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    janapaksham:
+      rule: "Host(`janapaksham.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: janapaksham-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sorashipping:
+      rule: "Host(`sorashipping.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sorashipping-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bauer:
+      rule: "Host(`bauer.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bauer-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kamakhya:
+      rule: "Host(`kamakhya.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kamakhya-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tmd:
+      rule: "Host(`tmd.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tmd-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skylan:
+      rule: "Host(`skylan.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skylan-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    varahe:
+      rule: "Host(`varahe.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: varahe-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    stalwart:
+      rule: "Host(`stalwart.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: stalwart-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mch:
+      rule: "Host(`mch.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mch-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    info7:
+      rule: "Host(`info7.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: info7-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    boketto:
+      rule: "Host(`boketto.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: boketto-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bruhat:
+      rule: "Host(`bruhat.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bruhat-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vijaylaxmi:
+      rule: "Host(`vijaylaxmi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vijaylaxmi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lvi:
+      rule: "Host(`lvi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lvi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vfit:
+      rule: "Host(`vfit.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vfit-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    europack:
+      rule: "Host(`europack.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: europack-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ykc:
+      rule: "Host(`ykc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ykc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sass-delhi:
+      rule: "Host(`sass-delhi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sass-delhi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pmtvs:
+      rule: "Host(`pmtvs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pmtvs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ltsgroup:
+      rule: "Host(`ltsgroup.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ltsgroup-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    harbour:
+      rule: "Host(`harbour.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: harbour-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    phoenix:
+      rule: "Host(`phoenix.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: phoenix-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    altius:
+      rule: "Host(`altius.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: altius-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tvtcasting:
+      rule: "Host(`tvtcasting.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tvtcasting-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bharatpetrol:
+      rule: "Host(`bharatpetrol.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bharatpetrol-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skengrwork:
+      rule: "Host(`skengrwork.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skengrwork-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    otss:
+      rule: "Host(`otss.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: otss-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    thinkomega:
+      rule: "Host(`thinkomega.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: thinkomega-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aashicare:
+      rule: "Host(`aashicare.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aashicare-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pcs:
+      rule: "Host(`pcs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pcs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bcc:
+      rule: "Host(`bcc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bcc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ctpl:
+      rule: "Host(`ctpl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ctpl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    genxhire:
+      rule: "Host(`genxhire.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: genxhire-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    milanlab:
+      rule: "Host(`milanlab.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: milanlab-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    knelettro:
+      rule: "Host(`knelettro.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: knelettro-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rgm:
+      rule: "Host(`rgm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rgm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bapl:
+      rule: "Host(`bapl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bapl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sass-delhi2:
+      rule: "Host(`sass-delhi2.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sass-delhi2-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skr:
+      rule: "Host(`skr.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skr-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sdl:
+      rule: "Host(`sdl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sdl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vhs:
+      rule: "Host(`vhs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vhs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    umajewellers:
+      rule: "Host(`umajewellers.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: umajewellers-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mvi:
+      rule: "Host(`mvi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mvi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ccc:
+      rule: "Host(`ccc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ccc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kao:
+      rule: "Host(`kao.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kao-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sass-nm:
+      rule: "Host(`sass-nm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sass-nm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lightbook-palghar:
+      rule: "Host(`lightbook-palghar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lightbook-palghar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lakehomes:
+      rule: "Host(`lakehomes.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lakehomes-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    zilla:
+      rule: "Host(`zilla.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: zilla-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ushaelec:
+      rule: "Host(`ushaelec.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ushaelec-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ebs:
+      rule: "Host(`ebs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ebs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    borkars:
+      rule: "Host(`borkars.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: borkars-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    learnocean:
+      rule: "Host(`learnocean.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: learnocean-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vista:
+      rule: "Host(`vista.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vista-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    redrock:
+      rule: "Host(`redrock.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: redrock-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    psd:
+      rule: "Host(`psd.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: psd-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    cureit:
+      rule: "Host(`cureit.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: cureit-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kc:
+      rule: "Host(`kc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    saamy:
+      rule: "Host(`saamy.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: saamy-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wiseverse:
+      rule: "Host(`wiseverse.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wiseverse-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    crafthome:
+      rule: "Host(`crafthome.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: crafthome-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jeetglobal:
+      rule: "Host(`jeetglobal.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jeetglobal-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jeetent:
+      rule: "Host(`jeetent.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jeetent-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    realtime:
+      rule: "Host(`realtime.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: realtime-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vsnent:
+      rule: "Host(`vsnent.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vsnent-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dh:
+      rule: "Host(`dh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rrcs:
+      rule: "Host(`rrcs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rrcs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aew:
+      rule: "Host(`aew.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aew-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    irondome:
+      rule: "Host(`irondome.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: irondome-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tetcos:
+      rule: "Host(`tetcos.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tetcos-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    msc:
+      rule: "Host(`msc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: msc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ssc:
+      rule: "Host(`ssc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ssc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aps:
+      rule: "Host(`aps.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aps-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skg:
+      rule: "Host(`skg.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skg-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jpee:
+      rule: "Host(`jpee.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jpee-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    genotek:
+      rule: "Host(`genotek.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: genotek-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tcac:
+      rule: "Host(`tcac.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tcac-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dcare:
+      rule: "Host(`dcare.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dcare-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    npj:
+      rule: "Host(`npj.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: npj-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    srimanjunatha:
+      rule: "Host(`srimanjunatha.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srimanjunatha-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    acp:
+      rule: "Host(`acp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: acp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    s4projects:
+      rule: "Host(`s4projects.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: s4projects-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    edwise:
+      rule: "Host(`edwise.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: edwise-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kids:
+      rule: "Host(`kids.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kids-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ambica:
+      rule: "Host(`ambica.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ambica-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ekab:
+      rule: "Host(`ekab.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ekab-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    labinduss:
+      rule: "Host(`labinduss.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: labinduss-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wiser:
+      rule: "Host(`wiser.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wiser-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    chayaedu:
+      rule: "Host(`chayaedu.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: chayaedu-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ddi:
+      rule: "Host(`ddi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ddi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    oso:
+      rule: "Host(`oso.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: oso-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pranjul:
+      rule: "Host(`pranjul.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pranjul-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bleaf:
+      rule: "Host(`bleaf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bleaf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kms:
+      rule: "Host(`kms.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kms-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    spfitness:
+      rule: "Host(`spfitness.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spfitness-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    spdii:
+      rule: "Host(`spdii.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spdii-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skillfort:
+      rule: "Host(`skillfort.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skillfort-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hardcore:
+      rule: "Host(`hardcore.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hardcore-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hcg:
+      rule: "Host(`hcg.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hcg-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rme:
+      rule: "Host(`rme.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rme-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    patilsand:
+      rule: "Host(`patilsand.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: patilsand-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hirai:
+      rule: "Host(`hirai.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hirai-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bijjargi:
+      rule: "Host(`bijjargi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bijjargi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    agencymedia:
+      rule: "Host(`agencymedia.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: agencymedia-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    digivasai:
+      rule: "Host(`digivasai.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: digivasai-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vdc:
+      rule: "Host(`vdc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vdc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nextgen:
+      rule: "Host(`nextgen.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nextgen-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    shnh:
+      rule: "Host(`shnh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shnh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    skytouch:
+      rule: "Host(`skytouch.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: skytouch-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aleef:
+      rule: "Host(`aleef.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aleef-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    srilakshmisolu:
+      rule: "Host(`srilakshmisolu.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srilakshmisolu-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nks:
+      rule: "Host(`nks.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nks-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ba:
+      rule: "Host(`ba.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ba-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pptc:
+      rule: "Host(`pptc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pptc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    brahmani:
+      rule: "Host(`brahmani.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: brahmani-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    srimurugan:
+      rule: "Host(`srimurugan.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srimurugan-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jsg:
+      rule: "Host(`jsg.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jsg-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hubenergys:
+      rule: "Host(`hubenergys.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hubenergys-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    submarine:
+      rule: "Host(`submarine.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: submarine-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    pioneer:
+      rule: "Host(`pioneer.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pioneer-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mb1:
+      rule: "Host(`mb1.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mb1-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mb2:
+      rule: "Host(`mb2.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mb2-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vrintl:
+      rule: "Host(`vrintl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vrintl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rajhtv:
+      rule: "Host(`rajhtv.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rajhtv-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kayyanar:
+      rule: "Host(`kayyanar.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kayyanar-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    saiortho:
+      rule: "Host(`saiortho.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: saiortho-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ptc:
+      rule: "Host(`ptc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ptc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sufisant:
+      rule: "Host(`sufisant.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sufisant-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    momentum:
+      rule: "Host(`momentum.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: momentum-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mpharmacy:
+      rule: "Host(`mpharmacy.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mpharmacy-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kamal:
+      rule: "Host(`kamal.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kamal-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    bis:
+      rule: "Host(`bis.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bis-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    shoolini:
+      rule: "Host(`shoolini.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shoolini-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rwm:
+      rule: "Host(`rwm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rwm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hardrock:
+      rule: "Host(`hardrock.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hardrock-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    srisai:
+      rule: "Host(`srisai.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srisai-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    iti:
+      rule: "Host(`iti.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: iti-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    saec:
+      rule: "Host(`saec.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: saec-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    desirehomez:
+      rule: "Host(`desirehomez.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: desirehomez-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    fontspell:
+      rule: "Host(`fontspell.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: fontspell-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hfc:
+      rule: "Host(`hfc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hfc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mayasheel:
+      rule: "Host(`mayasheel.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mayasheel-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    imexco:
+      rule: "Host(`imexco.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: imexco-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    alaska:
+      rule: "Host(`alaska.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: alaska-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    barcode:
+      rule: "Host(`barcode.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: barcode-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    dotiya:
+      rule: "Host(`dotiya.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dotiya-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    htf:
+      rule: "Host(`htf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: htf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    cloudshine:
+      rule: "Host(`cloudshine.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: cloudshine-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aurigans:
+      rule: "Host(`aurigans.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aurigans-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    uniqueyou:
+      rule: "Host(`uniqueyou.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: uniqueyou-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sass-igidelhi:
+      rule: "Host(`sass-igidelhi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sass-igidelhi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    samair:
+      rule: "Host(`samair.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: samair-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ramapriya:
+      rule: "Host(`ramapriya.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ramapriya-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    kunjtraders:
+      rule: "Host(`kunjtraders.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kunjtraders-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    lifecooz:
+      rule: "Host(`lifecooz.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lifecooz-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vdec:
+      rule: "Host(`vdec.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vdec-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rstuff:
+      rule: "Host(`rstuff.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rstuff-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    iitg:
+      rule: "Host(`iitg.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: iitg-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    agnist:
+      rule: "Host(`agnist.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: agnist-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    wbvf:
+      rule: "Host(`wbvf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: wbvf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    gwsbangalore:
+      rule: "Host(`gwsbangalore.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: gwsbangalore-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+  services:
+    demo-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50000"
+        passHostHeader: true
+
+    ghk-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50001"
+        passHostHeader: true
+
+    dbt-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50002"
+        passHostHeader: true
+
+    kmh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50003"
+        passHostHeader: true
+
+    nxtspire-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50004"
+        passHostHeader: true
+
+    sls-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50005"
+        passHostHeader: true
+
+    eaiia-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50006"
+        passHostHeader: true
+
+    exla-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50007"
+        passHostHeader: true
+
+    thefs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50008"
+        passHostHeader: true
+
+    kjsck-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50009"
+        passHostHeader: true
+
+    ashablue-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50010"
+        passHostHeader: true
+
+    scpgirls-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50011"
+        passHostHeader: true
+
+    oriocci-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50012"
+        passHostHeader: true
+
+    anubhavconst-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50013"
+        passHostHeader: true
+
+    one8gym-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50014"
+        passHostHeader: true
+
+    rlmedio-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50015"
+        passHostHeader: true
+
+    armyschool-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50016"
+        passHostHeader: true
+
+    rmrssachiv-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50017"
+        passHostHeader: true
+
+    lightbook-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50018"
+        passHostHeader: true
+
+    globalindia-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50019"
+        passHostHeader: true
+
+    pratiksci-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50020"
+        passHostHeader: true
+
+    financepoint-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50021"
+        passHostHeader: true
+
+    ondesk-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50022"
+        passHostHeader: true
+
+    akshayeng-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50023"
+        passHostHeader: true
+
+    krj-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50024"
+        passHostHeader: true
+
+    natwest-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50025"
+        passHostHeader: true
+
+    iss-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50026"
+        passHostHeader: true
+
+    helpdeskfin-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50027"
+        passHostHeader: true
+
+    avmhospital-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50028"
+        passHostHeader: true
+
+    jamiatul-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50029"
+        passHostHeader: true
+
+    winpet-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50030"
+        passHostHeader: true
+
+    fmr-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50031"
+        passHostHeader: true
+
+    swanson-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50032"
+        passHostHeader: true
+
+    thinkbig-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50033"
+        passHostHeader: true
+
+    dgdigital-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50034"
+        passHostHeader: true
+
+    vidyasankalp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50035"
+        passHostHeader: true
+
+    aphtech-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50036"
+        passHostHeader: true
+
+    tectra-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50037"
+        passHostHeader: true
+
+    pk-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50038"
+        passHostHeader: true
+
+    teclowin-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50039"
+        passHostHeader: true
+
+    somayafash-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50040"
+        passHostHeader: true
+
+    faucon-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50041"
+        passHostHeader: true
+
+    ois-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50042"
+        passHostHeader: true
+
+    bfm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50043"
+        passHostHeader: true
+
+    fashosiery-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50044"
+        passHostHeader: true
+
+    saarpharma-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50045"
+        passHostHeader: true
+
+    meehosp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50046"
+        passHostHeader: true
+
+    domin8-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50047"
+        passHostHeader: true
+
+    elite-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50048"
+        passHostHeader: true
+
+    srilakshmi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50049"
+        passHostHeader: true
+
+    ismo-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50050"
+        passHostHeader: true
+
+    park-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50051"
+        passHostHeader: true
+
+    vmc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50052"
+        passHostHeader: true
+
+    sangharsh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50053"
+        passHostHeader: true
+
+    bloomsolve-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50054"
+        passHostHeader: true
+
+    voiceetc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50055"
+        passHostHeader: true
+
+    rishi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50056"
+        passHostHeader: true
+
+    edujam-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50057"
+        passHostHeader: true
+
+    techpoint-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50058"
+        passHostHeader: true
+
+    niti-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50059"
+        passHostHeader: true
+
+    prism-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50060"
+        passHostHeader: true
+
+    gazebo-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50061"
+        passHostHeader: true
+
+    ctc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50062"
+        passHostHeader: true
+
+    malabar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50063"
+        passHostHeader: true
+
+    railwire-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50064"
+        passHostHeader: true
+
+    alpro-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50065"
+        passHostHeader: true
+
+    purechem-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50066"
+        passHostHeader: true
+
+    rosea-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50067"
+        passHostHeader: true
+
+    calids-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50068"
+        passHostHeader: true
+
+    rrg-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50069"
+        passHostHeader: true
+
+    wtf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50070"
+        passHostHeader: true
+
+    juza-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50071"
+        passHostHeader: true
+
+    dxn-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50072"
+        passHostHeader: true
+
+    pallavi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50073"
+        passHostHeader: true
+
+    bbl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50074"
+        passHostHeader: true
+
+    ssm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50075"
+        passHostHeader: true
+
+    shloka-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50076"
+        passHostHeader: true
+
+    pj-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50077"
+        passHostHeader: true
+
+    ves-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50078"
+        passHostHeader: true
+
+    sadguru-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50079"
+        passHostHeader: true
+
+    drkv-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50080"
+        passHostHeader: true
+
+    miku-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50081"
+        passHostHeader: true
+
+    plus91-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50082"
+        passHostHeader: true
+
+    standesign-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50083"
+        passHostHeader: true
+
+    harshraj-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50084"
+        passHostHeader: true
+
+    bblokha-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50085"
+        passHostHeader: true
+
+    bblhapa-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50086"
+        passHostHeader: true
+
+    tulua-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50087"
+        passHostHeader: true
+
+    maeyes-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50088"
+        passHostHeader: true
+
+    santosh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50089"
+        passHostHeader: true
+
+    dsi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50090"
+        passHostHeader: true
+
+    rush-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50091"
+        passHostHeader: true
+
+    m2-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50092"
+        passHostHeader: true
+
+    bblrajkot-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50093"
+        passHostHeader: true
+
+    t-rex-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50094"
+        passHostHeader: true
+
+    gyansagar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50095"
+        passHostHeader: true
+
+    bluestar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50096"
+        passHostHeader: true
+
+    tenbkc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50097"
+        passHostHeader: true
+
+    sass-udaipur-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50098"
+        passHostHeader: true
+
+    nds-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50099"
+        passHostHeader: true
+
+    omdisplay-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50100"
+        passHostHeader: true
+
+    croxoil-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50101"
+        passHostHeader: true
+
+    msf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50102"
+        passHostHeader: true
+
+    asm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50103"
+        passHostHeader: true
+
+    vgs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50104"
+        passHostHeader: true
+
+    tves-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50105"
+        passHostHeader: true
+
+    skeng-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50106"
+        passHostHeader: true
+
+    sarojani-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50107"
+        passHostHeader: true
+
+    dd-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50108"
+        passHostHeader: true
+
+    toe-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50109"
+        passHostHeader: true
+
+    alenco-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50110"
+        passHostHeader: true
+
+    hi-tech-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50111"
+        passHostHeader: true
+
+    hitech-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50111"
+        passHostHeader: true
+
+    wooreedle-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50112"
+        passHostHeader: true
+
+    tydoc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50113"
+        passHostHeader: true
+
+    madhava-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50114"
+        passHostHeader: true
+
+    tdc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50115"
+        passHostHeader: true
+
+    ks-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50116"
+        passHostHeader: true
+
+    rotoline-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50117"
+        passHostHeader: true
+
+    sjp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50118"
+        passHostHeader: true
+
+    milan-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50119"
+        passHostHeader: true
+
+    ksm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50120"
+        passHostHeader: true
+
+    aais-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50121"
+        passHostHeader: true
+
+    edujam-dadar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50122"
+        passHostHeader: true
+
+    sandeepani-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50123"
+        passHostHeader: true
+
+    wellness-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50124"
+        passHostHeader: true
+
+    ghv-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50125"
+        passHostHeader: true
+
+    dyna-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50126"
+        passHostHeader: true
+
+    tvm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50127"
+        passHostHeader: true
+
+    spl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50128"
+        passHostHeader: true
+
+    aqua-borivali-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50129"
+        passHostHeader: true
+
+    aqua-kandivali-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50130"
+        passHostHeader: true
+
+    dvipa-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50131"
+        passHostHeader: true
+
+    edujam-thane-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50132"
+        passHostHeader: true
+
+    aashvi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50133"
+        passHostHeader: true
+
+    rainforest-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50134"
+        passHostHeader: true
+
+    rk-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50135"
+        passHostHeader: true
+
+    sfs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50136"
+        passHostHeader: true
+
+    vmi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50137"
+        passHostHeader: true
+
+    jf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50138"
+        passHostHeader: true
+
+    s2-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50139"
+        passHostHeader: true
+
+    uprio-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50140"
+        passHostHeader: true
+
+    rkd-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50141"
+        passHostHeader: true
+
+    kimsh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50142"
+        passHostHeader: true
+
+    brandworks-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50143"
+        passHostHeader: true
+
+    ie-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50144"
+        passHostHeader: true
+
+    transpack-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50145"
+        passHostHeader: true
+
+    lakhans-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50146"
+        passHostHeader: true
+
+    fce-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50147"
+        passHostHeader: true
+
+    velloils-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50148"
+        passHostHeader: true
+
+    altiuz-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50149"
+        passHostHeader: true
+
+    nzi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50150"
+        passHostHeader: true
+
+    cca-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50151"
+        passHostHeader: true
+
+    awch-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50152"
+        passHostHeader: true
+
+    eonmatrix-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50202"
+        passHostHeader: true
+
+    premjyot-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50154"
+        passHostHeader: true
+
+    ppp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50155"
+        passHostHeader: true
+
+    autotronix-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50156"
+        passHostHeader: true
+
+    pssp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50157"
+        passHostHeader: true
+
+    itology-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50158"
+        passHostHeader: true
+
+    bhc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50159"
+        passHostHeader: true
+
+    bloom-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50160"
+        passHostHeader: true
+
+    pujashoppee-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50161"
+        passHostHeader: true
+
+    eyeqtech-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50162"
+        passHostHeader: true
+
+    triant-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50163"
+        passHostHeader: true
+
+    janapaksham-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50164"
+        passHostHeader: true
+
+    sorashipping-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50165"
+        passHostHeader: true
+
+    bauer-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50166"
+        passHostHeader: true
+
+    kamakhya-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50167"
+        passHostHeader: true
+
+    tmd-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50168"
+        passHostHeader: true
+
+    skylan-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50169"
+        passHostHeader: true
+
+    varahe-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50170"
+        passHostHeader: true
+
+    stalwart-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50171"
+        passHostHeader: true
+
+    mch-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50172"
+        passHostHeader: true
+
+    info7-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50173"
+        passHostHeader: true
+
+    boketto-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50174"
+        passHostHeader: true
+
+    bruhat-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50175"
+        passHostHeader: true
+
+    vijaylaxmi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50176"
+        passHostHeader: true
+
+    lvi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50177"
+        passHostHeader: true
+
+    vfit-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50178"
+        passHostHeader: true
+
+    europack-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50179"
+        passHostHeader: true
+
+    ykc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50180"
+        passHostHeader: true
+
+    sass-delhi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50181"
+        passHostHeader: true
+
+    pmtvs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50182"
+        passHostHeader: true
+
+    ltsgroup-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50183"
+        passHostHeader: true
+
+    harbour-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50184"
+        passHostHeader: true
+
+    phoenix-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50185"
+        passHostHeader: true
+
+    altius-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50186"
+        passHostHeader: true
+
+    tvtcasting-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50187"
+        passHostHeader: true
+
+    bharatpetrol-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50188"
+        passHostHeader: true
+
+    skengrwork-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50189"
+        passHostHeader: true
+
+    otss-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50190"
+        passHostHeader: true
+
+    thinkomega-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50191"
+        passHostHeader: true
+
+    aashicare-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50192"
+        passHostHeader: true
+
+    pcs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50193"
+        passHostHeader: true
+
+    bcc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50194"
+        passHostHeader: true
+
+    ctpl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50195"
+        passHostHeader: true
+
+    genxhire-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50196"
+        passHostHeader: true
+
+    milanlab-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50197"
+        passHostHeader: true
+
+    knelettro-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50198"
+        passHostHeader: true
+
+    rgm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50199"
+        passHostHeader: true
+
+    bapl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50200"
+        passHostHeader: true
+
+    sass-delhi2-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50201"
+        passHostHeader: true
+
+    skr-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50203"
+        passHostHeader: true
+
+    sdl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50204"
+        passHostHeader: true
+
+    vhs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50205"
+        passHostHeader: true
+
+    umajewellers-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50206"
+        passHostHeader: true
+
+    mvi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50207"
+        passHostHeader: true
+
+    ccc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50208"
+        passHostHeader: true
+
+    kao-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50209"
+        passHostHeader: true
+
+    sass-nm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50210"
+        passHostHeader: true
+
+    lightbook-palghar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50211"
+        passHostHeader: true
+
+    lakehomes-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50212"
+        passHostHeader: true
+
+    zilla-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50213"
+        passHostHeader: true
+
+    ushaelec-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50214"
+        passHostHeader: true
+
+    ebs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50215"
+        passHostHeader: true
+
+    borkars-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50216"
+        passHostHeader: true
+
+    learnocean-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50217"
+        passHostHeader: true
+
+    vista-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50218"
+        passHostHeader: true
+
+    redrock-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50219"
+        passHostHeader: true
+
+    psd-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50220"
+        passHostHeader: true
+
+    cureit-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50221"
+        passHostHeader: true
+
+    kc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50222"
+        passHostHeader: true
+
+    saamy-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50223"
+        passHostHeader: true
+
+    wiseverse-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50224"
+        passHostHeader: true
+
+    crafthome-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50225"
+        passHostHeader: true
+
+    jeetglobal-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50226"
+        passHostHeader: true
+
+    jeetent-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50227"
+        passHostHeader: true
+
+    realtime-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50228"
+        passHostHeader: true
+
+    vsnent-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50229"
+        passHostHeader: true
+
+    dh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50230"
+        passHostHeader: true
+
+    rrcs-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50231"
+        passHostHeader: true
+
+    aew-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50232"
+        passHostHeader: true
+
+    irondome-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50233"
+        passHostHeader: true
+
+    tetcos-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50234"
+        passHostHeader: true
+
+    msc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50235"
+        passHostHeader: true
+
+    ssc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50236"
+        passHostHeader: true
+
+    aps-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50237"
+        passHostHeader: true
+
+    skg-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50238"
+        passHostHeader: true
+
+    jpee-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50239"
+        passHostHeader: true
+
+    genotek-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50240"
+        passHostHeader: true
+
+    tcac-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50241"
+        passHostHeader: true
+
+    dcare-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50242"
+        passHostHeader: true
+
+    npj-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50243"
+        passHostHeader: true
+
+    srimanjunatha-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50244"
+        passHostHeader: true
+
+    acp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50245"
+        passHostHeader: true
+
+    s4projects-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50246"
+        passHostHeader: true
+
+    edwise-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50247"
+        passHostHeader: true
+
+    kids-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50248"
+        passHostHeader: true
+
+    ambica-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50249"
+        passHostHeader: true
+
+    ekab-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50250"
+        passHostHeader: true
+
+    labinduss-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50251"
+        passHostHeader: true
+
+    wiser-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50252"
+        passHostHeader: true
+
+    chayaedu-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50253"
+        passHostHeader: true
+
+    ddi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50254"
+        passHostHeader: true
+
+    oso-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50255"
+        passHostHeader: true
+
+    pranjul-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50256"
+        passHostHeader: true
+
+    bleaf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50257"
+        passHostHeader: true
+
+    kms-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50258"
+        passHostHeader: true
+
+    spfitness-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50259"
+        passHostHeader: true
+
+    spdii-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50260"
+        passHostHeader: true
+
+    skillfort-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50261"
+        passHostHeader: true
+
+    hardcore-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50262"
+        passHostHeader: true
+
+    hcg-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50263"
+        passHostHeader: true
+
+    rme-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50264"
+        passHostHeader: true
+
+    patilsand-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50265"
+        passHostHeader: true
+
+    hirai-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50266"
+        passHostHeader: true
+
+    bijjargi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50267"
+        passHostHeader: true
+
+    agencymedia-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50268"
+        passHostHeader: true
+
+    digivasai-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50269"
+        passHostHeader: true
+
+    vdc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50270"
+        passHostHeader: true
+
+    nextgen-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50271"
+        passHostHeader: true
+
+    shnh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50272"
+        passHostHeader: true
+
+    skytouch-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50273"
+        passHostHeader: true
+
+    aleef-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50274"
+        passHostHeader: true
+
+    srilakshmisolu-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50275"
+        passHostHeader: true
+
+    nks-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50276"
+        passHostHeader: true
+
+    ba-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50277"
+        passHostHeader: true
+
+    pptc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50278"
+        passHostHeader: true
+
+    brahmani-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50279"
+        passHostHeader: true
+
+    srimurugan-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50280"
+        passHostHeader: true
+
+    jsg-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50281"
+        passHostHeader: true
+
+    hubenergys-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50282"
+        passHostHeader: true
+
+    submarine-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50283"
+        passHostHeader: true
+
+    pioneer-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50284"
+        passHostHeader: true
+
+    mb1-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50285"
+        passHostHeader: true
+
+    mb2-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50286"
+        passHostHeader: true
+
+    vrintl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50287"
+        passHostHeader: true
+
+    rajhtv-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50288"
+        passHostHeader: true
+
+    kayyanar-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50289"
+        passHostHeader: true
+
+    saiortho-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50290"
+        passHostHeader: true
+
+    ptc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50291"
+        passHostHeader: true
+
+    sufisant-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50292"
+        passHostHeader: true
+
+    momentum-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50293"
+        passHostHeader: true
+
+    mpharmacy-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50294"
+        passHostHeader: true
+
+    kamal-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50295"
+        passHostHeader: true
+
+    bis-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50296"
+        passHostHeader: true
+
+    shoolini-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50297"
+        passHostHeader: true
+
+    rwm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50298"
+        passHostHeader: true
+
+    hardrock-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50299"
+        passHostHeader: true
+
+    srisai-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50300"
+        passHostHeader: true
+
+    iti-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50301"
+        passHostHeader: true
+
+    saec-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50302"
+        passHostHeader: true
+
+    desirehomez-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50303"
+        passHostHeader: true
+
+    fontspell-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50304"
+        passHostHeader: true
+
+    hfc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50305"
+        passHostHeader: true
+
+    mayasheel-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50306"
+        passHostHeader: true
+
+    imexco-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50307"
+        passHostHeader: true
+
+    alaska-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50308"
+        passHostHeader: true
+
+    barcode-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50309"
+        passHostHeader: true
+
+    dotiya-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50310"
+        passHostHeader: true
+
+    htf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50311"
+        passHostHeader: true
+
+    cloudshine-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50312"
+        passHostHeader: true
+
+    aurigans-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50313"
+        passHostHeader: true
+
+    uniqueyou-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50314"
+        passHostHeader: true
+
+    sass-igidelhi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50315"
+        passHostHeader: true
+
+    samair-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50316"
+        passHostHeader: true
+
+    ramapriya-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50317"
+        passHostHeader: true
+
+    kunjtraders-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50318"
+        passHostHeader: true
+
+    lifecooz-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50319"
+        passHostHeader: true
+
+    vdec-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50320"
+        passHostHeader: true
+
+    rstuff-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50321"
+        passHostHeader: true
+
+    iitg-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50322"
+        passHostHeader: true
+
+    agnist-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50323"
+        passHostHeader: true
+
+    wbvf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50324"
+        passHostHeader: true
+
+    gwsbangalore-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50325"
+        passHostHeader: true
+

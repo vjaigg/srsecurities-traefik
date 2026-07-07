@@ -1,8 +1,14 @@
-# Pre-warm certificates for timenexahr.com (wildcard)
-# essl.in removed — not in this GoDaddy account, add later with correct key
+# =============================================================================
+# Certificate pre-warm routers
+# Forces Traefik to request and cache wildcard certs for all managed domains
+# before any real traffic hits them. Each router points to noop@internal so
+# no actual traffic is served — this is purely a cert-fetch trigger.
+# =============================================================================
 
 http:
   routers:
+
+    # timenexahr.com apex + wildcard *.timenexahr.com
     cert-preload-timenexahr:
       rule: "Host(`timenexahr.com`)"
       entryPoints: ["websecure"]
@@ -13,6 +19,18 @@ http:
           - main: "timenexahr.com"
             sans: ["*.timenexahr.com"]
 
+    # onlineessl.in apex + wildcard *.onlineessl.in
+    cert-preload-onlineessl:
+      rule: "Host(`onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: noop@internal
+      tls:
+        certResolver: le
+        domains:
+          - main: "onlineessl.in"
+            sans: ["*.onlineessl.in"]
+
+    # traefik.timenexahr.com — pre-warm cert for dashboard entrypoint (:4000)
     cert-preload-traefik-dashboard:
       rule: "Host(`traefik.timenexahr.com`)"
       entryPoints: ["traefik"]

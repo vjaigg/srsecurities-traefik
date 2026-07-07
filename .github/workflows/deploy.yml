@@ -34,15 +34,22 @@ jobs:
 
       - name: Smoke test
         run: |
-          # Test dashboard responds (auth required = 401 or redirect is fine)
-          CODE=$(curl -sk -o /dev/null -w "%{http_code}" https://traefik.timenexahr.com/dashboard/)
+          # Runner is on the Traefik VM — use --resolve to bypass DNS/hairpin NAT
+          # and hit Traefik's TLS port directly on localhost.
+
+          # Dashboard: BasicAuth required → expect 401
+          CODE=$(curl -sk --resolve traefik.timenexahr.com:443:127.0.0.1 \
+                   -o /dev/null -w "%{http_code}" \
+                   https://traefik.timenexahr.com/dashboard/)
           echo "Dashboard response: $CODE"
           [[ "$CODE" == "200" || "$CODE" == "401" || "$CODE" == "302" ]] \
-            && echo "✅ Dashboard reachable" \
+            && echo "✅ Dashboard reachable (auth prompt returned)" \
             || (echo "❌ Dashboard returned unexpected $CODE" && exit 1)
 
-          # Test demo.timenexahr.com
-          CODE=$(curl -sk -o /dev/null -w "%{http_code}" https://demo.timenexahr.com/)
+          # demo.timenexahr.com
+          CODE=$(curl -sk --resolve demo.timenexahr.com:443:127.0.0.1 \
+                   -o /dev/null -w "%{http_code}" \
+                   https://demo.timenexahr.com/)
           echo "TimeNexaHR response: $CODE"
           [[ "$CODE" == "200" || "$CODE" == "302" ]] \
             && echo "✅ demo.timenexahr.com reachable" \

@@ -17,7 +17,7 @@ http:
     dashboard-auth:
       basicAuth:
         users:
-          - "timenexasuperuser:$2y$05$Tu0Xp3QJaGjFoMclJD83COF6Fw0snxQ0GBB4HyewKSkP.ht7eNfGO"
+          - "timenexasuperuser:$2y$05$57wqqDCLXJ9DNbMrFzmI1ezQqO8Tf2hKu6stdRCMcQawkvCNAKHy6"
         realm: "Traefik Dashboard"
 
   routers:

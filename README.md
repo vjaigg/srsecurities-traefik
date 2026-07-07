@@ -60,8 +60,7 @@ srsecurities-traefik/
     ├── cert-preload.yaml        # Pre-warms wildcard certs on startup
     ├── timenexahr.com.yaml      # Routes for timenexahr.com services
     ├── onlineessl.in.yaml       # 326 tenant routes for onlineessl.in (auto-generated)
-    ├── dashboard.yaml           # Traefik dashboard routes
-    └── essl.in.yaml.disabled    # Pending (rename to .yaml when GoDaddy key available)
+    └── dashboard.yaml           # Traefik dashboard routes
 ```
 
 > **Important:** Traefik only reads `.yaml` / `.yml` files from `dynamic/`. Files with any other extension (e.g. `.yaml.disabled`) are silently ignored — use this to disable a config without deleting it.
@@ -98,12 +97,6 @@ All subdomains follow the pattern `<slug>.onlineessl.in → 172.22.66.10:<port>`
 | `eonmatrix.onlineessl.in` | 50202 |
 
 > To fix a 502: start the corresponding container on `172.22.66.10` — no Traefik changes needed.
-
-### Disabled / pending
-
-| Domain | File | Reason |
-|---|---|---|
-| `essl.in` / `*.essl.in` | `essl.in.yaml.disabled` | GoDaddy key for essl.in not yet available |
 
 ---
 
@@ -254,8 +247,6 @@ GODADDY2_API_SECRET=<second-account-secret>
 ```
 
 Then use `certResolver: le2` in routes for that domain.
-
-> `essl.in` is currently disabled (`essl.in.yaml.disabled`) — it's on a different GoDaddy account. Rename to `essl.in.yaml` and add `GODADDY2_*` env vars when the essl.in account key is provided.
 
 ---
 

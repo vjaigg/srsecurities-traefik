@@ -11,16 +11,6 @@ http:
       tls:
         certResolver: le
 
-    vjai:
-      rule: "Host(`vjai.onlineessl.in`)"
-      entryPoints: ["websecure"]
-      service: vjai-svc
-      middlewares: ["security-headers", "compress"]
-      tls:
-        certResolver: le
-
-
-
     ghk:
       rule: "Host(`ghk.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4578,9 +4568,3 @@ http:
           - url: "http://172.22.66.10:50325"
         passHostHeader: true
 
-### this is test to be removed
-    vjai-svc:
-      loadBalancer:
-        servers:
-          - url: "http://172.22.66.10:50326"
-        passHostHeader: true

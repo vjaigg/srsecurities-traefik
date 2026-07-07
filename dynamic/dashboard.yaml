@@ -2,7 +2,8 @@
 # Traefik Dashboard
 # URL:  https://traefik.timenexahr.com/dashboard/
 # Also: https://traefik.timenexahr.com → redirects to /dashboard/
-# Port 4000 still works for LAN direct access
+# Auth: BasicAuth (timenexasuperuser / T!g3rFlank)
+# Port 4000 still works for LAN direct access (same auth required)
 # =============================================================================
 
 http:
@@ -13,13 +14,19 @@ http:
         replacement: "https://$1/dashboard/"
         permanent: true
 
+    dashboard-auth:
+      basicAuth:
+        users:
+          - "timenexasuperuser:$2y$05$Tu0Xp3QJaGjFoMclJD83COF6Fw0snxQ0GBB4HyewKSkP.ht7eNfGO"
+        realm: "Traefik Dashboard"
+
   routers:
-    # Primary: dashboard on port 443 (websecure) — publicly reachable
+    # Primary: dashboard on port 443 (websecure) — publicly reachable, auth required
     traefik-dashboard:
       rule: "Host(`traefik.timenexahr.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
       entryPoints: ["websecure"]
       service: api@internal
-      middlewares: ["security-headers"]
+      middlewares: ["dashboard-auth", "security-headers"]
       tls:
         certResolver: le
 
@@ -32,12 +39,12 @@ http:
         certResolver: le
       priority: 1
 
-    # Secondary: dashboard still on port 4000 (LAN direct)
+    # Secondary: dashboard on port 4000 (LAN direct), same auth
     traefik-dashboard-4000:
       rule: "Host(`traefik.timenexahr.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
       entryPoints: ["traefik"]
       service: api@internal
-      middlewares: ["security-headers"]
+      middlewares: ["dashboard-auth", "security-headers"]
       tls:
         certResolver: le
 

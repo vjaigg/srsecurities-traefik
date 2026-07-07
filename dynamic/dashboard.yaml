@@ -1,0 +1,51 @@
+# =============================================================================
+# Traefik Dashboard
+# URL:  https://traefik.timenexahr.com/dashboard/
+# Also: https://traefik.timenexahr.com → redirects to /dashboard/
+# Port 4000 still works for LAN direct access
+# =============================================================================
+
+http:
+  middlewares:
+    to-dashboard:
+      redirectRegex:
+        regex: "^https?://([^/]+)(:[0-9]+)?/?$"
+        replacement: "https://$1/dashboard/"
+        permanent: true
+
+  routers:
+    # Primary: dashboard on port 443 (websecure) — publicly reachable
+    traefik-dashboard:
+      rule: "Host(`traefik.timenexahr.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
+      entryPoints: ["websecure"]
+      service: api@internal
+      middlewares: ["security-headers"]
+      tls:
+        certResolver: le
+
+    traefik-root-redirect:
+      rule: "Host(`traefik.timenexahr.com`)"
+      entryPoints: ["websecure"]
+      service: noop@internal
+      middlewares: ["to-dashboard"]
+      tls:
+        certResolver: le
+      priority: 1
+
+    # Secondary: dashboard still on port 4000 (LAN direct)
+    traefik-dashboard-4000:
+      rule: "Host(`traefik.timenexahr.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
+      entryPoints: ["traefik"]
+      service: api@internal
+      middlewares: ["security-headers"]
+      tls:
+        certResolver: le
+
+    traefik-root-redirect-4000:
+      rule: "Host(`traefik.timenexahr.com`)"
+      entryPoints: ["traefik"]
+      service: noop@internal
+      middlewares: ["to-dashboard"]
+      tls:
+        certResolver: le
+      priority: 1

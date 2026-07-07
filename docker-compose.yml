@@ -1,0 +1,89 @@
+version: "3.9"
+
+# =============================================================================
+# TimeNexaHR — Traefik Edge Proxy
+# Host:    172.22.66.25 (public: 111.125.252.176 via PFSense NAT)
+# Domains: timenexahr.com, *.timenexahr.com, essl.in, *.essl.in
+# SSL:     Let's Encrypt DNS-01 via GoDaddy API (auto-renew)
+# =============================================================================
+
+services:
+  traefik:
+    image: traefik:v2.11
+    container_name: edge-traefik
+    restart: unless-stopped
+    command:
+      # ---------------------------------------------------------------------------
+      # Providers — file watcher for dynamic config in /etc/traefik/dynamic
+      # ---------------------------------------------------------------------------
+      - "--providers.file.directory=/etc/traefik/dynamic"
+      - "--providers.file.watch=true"
+
+      # ---------------------------------------------------------------------------
+      # Entry points
+      # ---------------------------------------------------------------------------
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.traefik.address=:4000"
+
+      # Force HTTP → HTTPS globally
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+
+      # ---------------------------------------------------------------------------
+      # Dashboard (API exposed on :4000, protected by allow-lan-only middleware)
+      # ---------------------------------------------------------------------------
+      - "--api.dashboard=true"
+      - "--api.insecure=false"
+
+      # ---------------------------------------------------------------------------
+      # ACME / Let's Encrypt — DNS-01 via GoDaddy
+      # ---------------------------------------------------------------------------
+      - "--certificatesresolvers.le.acme.email=${LE_EMAIL}"
+      - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.le.acme.dnschallenge=true"
+      - "--certificatesresolvers.le.acme.dnschallenge.provider=godaddy"
+      - "--certificatesresolvers.le.acme.dnschallenge.delaybeforecheck=30"
+      - "--certificatesresolvers.le.acme.dnschallenge.resolvers=1.1.1.1:53,8.8.8.8:53"
+
+      # ---------------------------------------------------------------------------
+      # Logging
+      # ---------------------------------------------------------------------------
+      - "--accesslog=true"
+      - "--accesslog.format=json"
+      - "--accesslog.fields.defaultmode=keep"
+      - "--accesslog.bufferingSize=100"
+      - "--log.level=INFO"
+      - "--log.format=json"
+
+      # ---------------------------------------------------------------------------
+      # Misc
+      # ---------------------------------------------------------------------------
+      - "--serversTransport.maxidleconnsperhost=64"
+
+    ports:
+      - "80:80"
+      - "443:443"
+      - "4000:4000"       # Dashboard — PFSense should NOT forward this to public
+
+    environment:
+      # GoDaddy API credentials for DNS-01 challenge
+      GODADDY_API_KEY:    "${GODADDY_API_KEY}"
+      GODADDY_API_SECRET: "${GODADDY_API_SECRET}"
+
+    volumes:
+      - "./letsencrypt:/letsencrypt"
+      - "./dynamic:/etc/traefik/dynamic:ro"
+
+    # Explicit DNS so the container can reach Let's Encrypt and GoDaddy APIs
+    # (systemd-resolved at 127.0.0.53 is not reachable from inside Docker)
+    dns:
+      - "8.8.8.8"
+      - "1.1.1.1"
+
+    networks: [edge]
+
+networks:
+  edge:
+    driver: bridge

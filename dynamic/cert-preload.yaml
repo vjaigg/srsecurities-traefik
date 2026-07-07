@@ -1,0 +1,21 @@
+# Pre-warm certificates for timenexahr.com (wildcard)
+# essl.in removed — not in this GoDaddy account, add later with correct key
+
+http:
+  routers:
+    cert-preload-timenexahr:
+      rule: "Host(`timenexahr.com`)"
+      entryPoints: ["websecure"]
+      service: noop@internal
+      tls:
+        certResolver: le
+        domains:
+          - main: "timenexahr.com"
+            sans: ["*.timenexahr.com"]
+
+    cert-preload-traefik-dashboard:
+      rule: "Host(`traefik.timenexahr.com`)"
+      entryPoints: ["traefik"]
+      service: noop@internal
+      tls:
+        certResolver: le

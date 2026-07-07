@@ -1,0 +1,17 @@
+# demo.timenexahr.com → 172.22.66.21:8000 (Gunicorn + WhiteNoise, no nginx)
+http:
+  routers:
+    demo-timenexahr:
+      rule: "Host(`demo.timenexahr.com`)"
+      entryPoints: ["websecure"]
+      service: demo-timenexahr-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+  services:
+    demo-timenexahr-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.21:8000"
+        passHostHeader: true

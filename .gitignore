@@ -1,0 +1,5 @@
+.env
+letsencrypt/acme.json
+letsencrypt/acme.json.bizongo-backup-*
+letsencrypt/acme.json.backup-*
+!letsencrypt/.gitkeep

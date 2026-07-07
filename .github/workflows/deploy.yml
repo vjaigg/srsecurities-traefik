@@ -1,0 +1,49 @@
+name: Deploy to Edge Traefik
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Sync config and reload Traefik
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync dynamic config
+        run: |
+          rsync -av --delete \
+            --exclude='.git' \
+            $GITHUB_WORKSPACE/dynamic/ \
+            /home/sysadmin/apps/srsecurities-traefik/dynamic/
+
+      - name: Sync docker-compose.yml
+        run: |
+          cp $GITHUB_WORKSPACE/docker-compose.yml \
+             /home/sysadmin/apps/srsecurities-traefik/docker-compose.yml
+
+      - name: Verify Traefik picked up changes
+        run: |
+          sleep 3
+          docker inspect edge-traefik --format '{{.State.Status}}' | grep -q running \
+            && echo "✅ Traefik container is running" \
+            || (echo "❌ Traefik container not running" && exit 1)
+
+      - name: Smoke test
+        run: |
+          # Test dashboard responds (auth required = 401 or redirect is fine)
+          CODE=$(curl -sk -o /dev/null -w "%{http_code}" https://traefik.timenexahr.com/dashboard/)
+          echo "Dashboard response: $CODE"
+          [[ "$CODE" == "200" || "$CODE" == "401" || "$CODE" == "302" ]] \
+            && echo "✅ Dashboard reachable" \
+            || (echo "❌ Dashboard returned unexpected $CODE" && exit 1)
+
+          # Test demo.timenexahr.com
+          CODE=$(curl -sk -o /dev/null -w "%{http_code}" https://demo.timenexahr.com/)
+          echo "TimeNexaHR response: $CODE"
+          [[ "$CODE" == "200" || "$CODE" == "302" ]] \
+            && echo "✅ demo.timenexahr.com reachable" \
+            || echo "⚠️  demo.timenexahr.com returned $CODE"

@@ -14,9 +14,11 @@ tls:
 http:
   middlewares:
 
+    # Used by all routes. frameDeny is intentionally omitted — the onlineessl.in
+    # ASP.NET apps use framesets internally and break if DENY is injected on sub-pages.
+    # The apps set their own X-Frame-Options: DENY where appropriate.
     security-headers:
       headers:
-        frameDeny: true
         contentTypeNosniff: true
         browserXssFilter: true
         referrerPolicy: no-referrer-when-downgrade

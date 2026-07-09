@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
 
+    vsn:
+      rule: "Host(`vsn.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vsn-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     ghk:
       rule: "Host(`ghk.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4576,3 +4584,14 @@ http:
           - url: "http://172.22.66.10:50325"
         passHostHeader: true
 
+    lalji-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50326"
+        passHostHeader: true
+
+    vsn-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50327"
+        passHostHeader: true

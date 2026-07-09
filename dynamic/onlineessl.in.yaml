@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    lalji:
+      rule: "Host(`lalji.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: lalji-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     ghk:
       rule: "Host(`ghk.onlineessl.in`)"
       entryPoints: ["websecure"]

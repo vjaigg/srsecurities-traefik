@@ -18,11 +18,19 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-
+        
     vsn:
       rule: "Host(`vsn.onlineessl.in`)"
       entryPoints: ["websecure"]
       service: vsn-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    medicity:
+      rule: "Host(`medicity.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: medicity-svc
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
@@ -4594,4 +4602,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50327"
+        passHostHeader: true
+
+    medicity-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50328"
         passHostHeader: true

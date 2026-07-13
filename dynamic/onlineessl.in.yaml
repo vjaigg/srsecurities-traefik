@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    spp:
+      rule: "Host(`spp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     vsn:
       rule: "Host(`vsn.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4609,3 +4617,10 @@ http:
         servers:
           - url: "http://172.22.66.10:50328"
         passHostHeader: true
+        
+    spp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50329"
+        passHostHeader: true
+

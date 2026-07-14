@@ -18,11 +18,19 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+          
     spp:
       rule: "Host(`spp.onlineessl.in`)"
       entryPoints: ["websecure"]
       service: spp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    bhadeng:
+      rule: "Host(`bhadeng.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bhadeng-svc
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
@@ -4623,4 +4631,9 @@ http:
         servers:
           - url: "http://172.22.66.10:50329"
         passHostHeader: true
-
+ 
+    bhadeng-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50330"
+        passHostHeader: true

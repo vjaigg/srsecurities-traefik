@@ -34,6 +34,14 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+       
+    ashokaisl:
+      rule: "Host(`ashokaisl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ashokaisl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     vsn:
       rule: "Host(`vsn.onlineessl.in`)"
@@ -4636,4 +4644,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50330"
+        passHostHeader: true
+        
+    ashokaisl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50331"
         passHostHeader: true

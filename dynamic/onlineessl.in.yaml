@@ -18,6 +18,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+        
+    rrkm:
+      rule: "Host(`rrkm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rrkm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    newlink:
+      rule: "Host(`newlink.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: newlink-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
 
     dtra:
       rule: "Host(`dtra.onlineessl.in`)"
@@ -4664,4 +4680,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50332"
+        passHostHeader: true
+        
+    rrkm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50333"
+        passHostHeader: true    
+        
+    newlink-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50334"
         passHostHeader: true

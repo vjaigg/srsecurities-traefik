@@ -18,7 +18,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-          
+
+    dtra:
+      rule: "Host(`dtra.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dtra-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     spp:
       rule: "Host(`spp.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4650,4 +4658,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50331"
+        passHostHeader: true
+        
+    dtra-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50332"
         passHostHeader: true

@@ -19,6 +19,30 @@ http:
       tls:
         certResolver: le
         
+    aatcti:
+      rule: "Host(`aatcti.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aatcti-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    dky:
+      rule: "Host(`dky.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: dky-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    oasis:
+      rule: "Host(`oasis.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: oasis-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     rrkm:
       rule: "Host(`rrkm.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4692,4 +4716,22 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50334"
+        passHostHeader: true
+                
+    aatcti-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50335"
+        passHostHeader: true
+                
+    dky-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50336"
+        passHostHeader: true
+                
+    oasis-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50337"
         passHostHeader: true

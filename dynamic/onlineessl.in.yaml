@@ -19,6 +19,30 @@ http:
       tls:
         certResolver: le
         
+    nh:
+      rule: "Host(`nh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    shivam:
+      rule: "Host(`shivam.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shivam-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    indiangym:
+      rule: "Host(`indiangym.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: indiangym-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     aatcti:
       rule: "Host(`aatcti.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4734,4 +4758,22 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50337"
+        passHostHeader: true
+                        
+    nh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50338"
+        passHostHeader: true
+                        
+    shivam-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50339"
+        passHostHeader: true
+                        
+    indiangym-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50340"
         passHostHeader: true

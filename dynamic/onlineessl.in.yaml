@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    newrain:
+      rule: "Host(`newrain.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: newrain-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     nh:
       rule: "Host(`nh.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4776,4 +4784,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50340"
+        passHostHeader: true
+                                
+    newrain-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50341"
         passHostHeader: true

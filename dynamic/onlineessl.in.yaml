@@ -4800,7 +4800,7 @@ http:
           - url: "http://172.22.66.10:50341"
         passHostHeader: true
         
-   primavera-svc:
+    primavera-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50341"

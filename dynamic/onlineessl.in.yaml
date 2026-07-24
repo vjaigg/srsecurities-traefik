@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    primavera:
+      rule: "Host(`primavera.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: primavera-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     newrain:
       rule: "Host(`newrain.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4787,6 +4795,12 @@ http:
         passHostHeader: true
                                 
     newrain-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50341"
+        passHostHeader: true
+        
+   primavera-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50341"

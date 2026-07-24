@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    rocketium:
+      rule: "Host(`rocketium.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rocketium-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     primavera:
       rule: "Host(`primavera.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4803,5 +4811,11 @@ http:
     primavera-svc:
       loadBalancer:
         servers:
-          - url: "http://172.22.66.10:50341"
+          - url: "http://172.22.66.10:50342"
+        passHostHeader: true
+                
+    rocketium-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50343"
         passHostHeader: true

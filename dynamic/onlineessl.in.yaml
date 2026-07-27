@@ -19,6 +19,38 @@ http:
       tls:
         certResolver: le
         
+    r2h:
+      rule: "Host(`r2h.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: r2h-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    powerhouse:
+      rule: "Host(`powerhouse.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: powerhouse-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    nms:
+      rule: "Host(`nms.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nms-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
+    geekonomy:
+      rule: "Host(`geekonomy.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: geekonomy-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     rocketium:
       rule: "Host(`rocketium.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4818,4 +4850,30 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50343"
+        passHostHeader: true    
+        
+    r2h-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50344"
         passHostHeader: true
+                        
+    powerhouse-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50345"
+        passHostHeader: true
+                
+    nms-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50346"
+        passHostHeader: true
+                
+    geekonomy-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50347"
+        passHostHeader: true
+
+

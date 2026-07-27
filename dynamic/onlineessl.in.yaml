@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    smp:
+      rule: "Host(`smp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: smp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     r2h:
       rule: "Host(`r2h.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4875,5 +4883,9 @@ http:
         servers:
           - url: "http://172.22.66.10:50347"
         passHostHeader: true
-
-
+          
+    smp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50348"
+        passHostHeader: true

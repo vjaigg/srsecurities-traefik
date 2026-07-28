@@ -18,6 +18,14 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+        
+    spantech:
+      rule: "Host(`spantech.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spantech-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
     
     cfpl:
       rule: "Host(`cfpl.onlineessl.in`)"
@@ -4903,3 +4911,9 @@ http:
         servers:
           - url: "http://172.22.66.10:50349"
         passHostHeader: true
+          
+    spantech-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50350"
+        passHostHeader: true       

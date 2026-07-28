@@ -18,7 +18,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+    
+    cfpl:
+      rule: "Host(`cfpl.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: cfpl-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+       
     smp:
       rule: "Host(`smp.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4888,4 +4896,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50348"
+        passHostHeader: true
+          
+    cfpl-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50349"
         passHostHeader: true

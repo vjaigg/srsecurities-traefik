@@ -18,7 +18,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+   
+    amt:
+      rule: "Host(`amt.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: amt-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+         
     spantech:
       rule: "Host(`spantech.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4917,3 +4925,9 @@ http:
         servers:
           - url: "http://172.22.66.10:50350"
         passHostHeader: true       
+          
+    amt-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50351"
+        passHostHeader: true

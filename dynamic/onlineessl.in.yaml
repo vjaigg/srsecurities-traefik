@@ -18,7 +18,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-   
+        
+    pranav:
+      rule: "Host(`pranav.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pranav-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+    
     anand:
       rule: "Host(`anand.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4944,4 +4952,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50352"
+        passHostHeader: true
+        
+    pranav-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50353"
         passHostHeader: true

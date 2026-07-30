@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
    
+    anand:
+      rule: "Host(`anand.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: anand-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+      
     amt:
       rule: "Host(`amt.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4930,4 +4938,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50351"
+        passHostHeader: true
+          
+    anand-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50352"
         passHostHeader: true

@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    adm:
+      rule: "Host(`adm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: adm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+          
     stxavier:
       rule: "Host(`stxavier.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4973,3 +4981,10 @@ http:
         servers:
           - url: "http://172.22.66.10:50354"
         passHostHeader: true
+                
+    adm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50355"
+        passHostHeader: true
+

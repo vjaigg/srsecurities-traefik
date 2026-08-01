@@ -19,6 +19,14 @@ http:
       tls:
         certResolver: le
         
+    stxavier:
+      rule: "Host(`stxavier.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: stxavier-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     pranav:
       rule: "Host(`pranav.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4958,4 +4966,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50353"
+        passHostHeader: true
+        
+    stxavier-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50354"
         passHostHeader: true

@@ -19,10 +19,26 @@ http:
       tls:
         certResolver: le
         
-    adm:
-      rule: "Host(`adm.onlineessl.in`)"
+    lalji:
+      rule: "Host(`lalji.onlineessl.in`)"
       entryPoints: ["websecure"]
-      service: adm-svc
+      service: lalji-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    nxtspire:
+      rule: "Host(`nxtspire.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nxtspire-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    tcc:
+      rule: "Host(`tcc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tcc-svc
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
@@ -4986,5 +5002,17 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50355"
+        passHostHeader: true
+           
+    nxtspire-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50356"
+        passHostHeader: true
+               
+    tcc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50357"
         passHostHeader: true
 

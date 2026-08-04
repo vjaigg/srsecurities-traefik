@@ -36,14 +36,6 @@ http:
       tls:
         certResolver: le
 
-    nxtspire:
-      rule: "Host(`nxtspire.onlineessl.in`)"
-      entryPoints: ["websecure"]
-      service: nxtspire-svc
-      middlewares: ["security-headers", "compress"]
-      tls:
-        certResolver: le
-
     tcc:
       rule: "Host(`tcc.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -2899,12 +2891,6 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50003"
-        passHostHeader: true
-
-    nxtspire-svc:
-      loadBalancer:
-        servers:
-          - url: "http://172.22.66.10:50004"
         passHostHeader: true
 
     sls-svc:

@@ -3,7 +3,7 @@
 # Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
-  
+
     demo:
       rule: "Host(`demo.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -19,7 +19,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+
+    adm:
+      rule: "Host(`adm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: adm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     rgiic:
       rule: "Host(`rgiic.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -43,7 +51,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-          
+
     stxavier:
       rule: "Host(`stxavier.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -51,7 +59,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+
     pranav:
       rule: "Host(`pranav.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -59,7 +67,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-    
+
     anand:
       rule: "Host(`anand.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -67,7 +75,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-      
+
     amt:
       rule: "Host(`amt.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -4871,7 +4879,7 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50333"
-        passHostHeader: true    
+        passHostHeader: true
         
     newlink-svc:
       loadBalancer:
@@ -4908,115 +4916,115 @@ http:
         servers:
           - url: "http://172.22.66.10:50339"
         passHostHeader: true
-                        
+
     indiangym-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50340"
         passHostHeader: true
-                                
+
     newrain-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50341"
         passHostHeader: true
-        
+
     primavera-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50342"
         passHostHeader: true
-                
+
     rocketium-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50343"
-        passHostHeader: true    
-        
+        passHostHeader: true
+
     r2h-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50344"
         passHostHeader: true
-                        
+
     powerhouse-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50345"
         passHostHeader: true
-                
+
     nms-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50346"
         passHostHeader: true
-                
+
     geekonomy-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50347"
         passHostHeader: true
-          
+
     smp-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50348"
         passHostHeader: true
-          
+
     cfpl-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50349"
         passHostHeader: true
-          
+
     spantech-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50350"
-        passHostHeader: true       
-          
+        passHostHeader: true
+
     amt-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50351"
         passHostHeader: true
-          
+
     anand-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50352"
         passHostHeader: true
-        
+
     pranav-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50353"
         passHostHeader: true
-        
+
     stxavier-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50354"
         passHostHeader: true
-                
+
     adm-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50355"
         passHostHeader: true
-           
+
     nxtspire-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50356"
         passHostHeader: true
-               
+
     tcc-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50357"
         passHostHeader: true
-     
+
     rgiic-svc:
       loadBalancer:
         servers:

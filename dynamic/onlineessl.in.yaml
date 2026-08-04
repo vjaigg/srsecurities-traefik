@@ -19,10 +19,10 @@ http:
       tls:
         certResolver: le
         
-    lalji:
-      rule: "Host(`lalji.onlineessl.in`)"
+    rgiic:
+      rule: "Host(`rgiic.onlineessl.in`)"
       entryPoints: ["websecure"]
-      service: lalji-svc
+      service: rgiic-svc
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
@@ -5015,4 +5015,9 @@ http:
         servers:
           - url: "http://172.22.66.10:50357"
         passHostHeader: true
-
+     
+    rgiic-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50358"
+        passHostHeader: true

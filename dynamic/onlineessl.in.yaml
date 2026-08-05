@@ -20,6 +20,22 @@ http:
       tls:
         certResolver: le
 
+    piti:
+      rule: "Host(`piti.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: piti-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    mbfn:
+      rule: "Host(`mbfn.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: mbfn-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     adm:
       rule: "Host(`adm.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5015,4 +5031,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50358"
+        passHostHeader: true
+
+    piti-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50359"
+        passHostHeader: true
+
+    mbfn-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50360"
         passHostHeader: true

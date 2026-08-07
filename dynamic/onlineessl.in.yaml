@@ -3,7 +3,6 @@
 # Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
-
     demo:
       rule: "Host(`demo.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -12,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    etc:
+      rule: "Host(`etc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: etc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     saiastra:
       rule: "Host(`saiastra.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5057,4 +5064,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50361"
+        passHostHeader: true
+
+    etc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50362"
         passHostHeader: true

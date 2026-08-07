@@ -12,6 +12,14 @@ http:
       tls:
         certResolver: le
 
+    saiastra:
+      rule: "Host(`saiastra.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: saiastra-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     lalji:
       rule: "Host(`lalji.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5043,4 +5051,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50360"
+        passHostHeader: true
+
+    saiastra-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50361"
         passHostHeader: true

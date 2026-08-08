@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    phs:
+      rule: "Host(`phs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: phs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     etc:
       rule: "Host(`etc.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5067,6 +5075,12 @@ http:
         passHostHeader: true
 
     etc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50362"
+        passHostHeader: true
+
+    phs-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50362"

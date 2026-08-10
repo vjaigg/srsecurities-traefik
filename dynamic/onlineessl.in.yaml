@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    asp:
+      rule: "Host(`asp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: asp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    globus:
+      rule: "Host(`globus.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: globus-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le        
+
     demandflu:
       rule: "Host(`demandflu.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5112,4 +5128,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50365"
+        passHostHeader: true
+        
+    asp-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50366"
+        passHostHeader: true
+
+    globus-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50367"
         passHostHeader: true

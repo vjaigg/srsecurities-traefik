@@ -18,7 +18,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-     
+
     7steed:
       rule: "Host(`7steed.onlineessl.in`)"
       entryPoints: ["websecure"]

@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    demandflu:
+      rule: "Host(`demandflu.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: demandflu-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+     
     7steed:
       rule: "Host(`7steed.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5098,4 +5106,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50364"
+        passHostHeader: true
+
+    demandflu-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50365"
         passHostHeader: true

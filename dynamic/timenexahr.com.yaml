@@ -1,5 +1,6 @@
 # demo.timenexahr.com → 172.22.66.21:8000 (Gunicorn + WhiteNoise, no nginx)
 # labinduss.timenexahr.com → 172.22.66.21:8001
+# studiodna.timenexahr.com → 172.22.66.21:8002
 http:
   routers:
     demo-timenexahr:
@@ -18,6 +19,14 @@ http:
       tls:
         certResolver: le
 
+    studiodna-timenexahr:
+      rule: "Host(`studiodna.timenexahr.com`)"
+      entryPoints: ["websecure"]
+      service: studiodna-timenexahr-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
   services:
     demo-timenexahr-svc:
       loadBalancer:
@@ -29,4 +38,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.21:8001"
+        passHostHeader: true
+
+    studiodna-timenexahr-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.21:8002"
         passHostHeader: true

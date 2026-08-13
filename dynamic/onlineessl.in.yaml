@@ -5195,5 +5195,5 @@ http:
     shivaji-svc:
       loadBalancer:
         servers:
-          - url: "http://172.22.66.10:50370"
+          - url: "http://172.22.66.10:50371"
         passHostHeader: true

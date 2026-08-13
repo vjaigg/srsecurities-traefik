@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    pci:
+      rule: "Host(`pci.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pci-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    shivaji:
+      rule: "Host(`shivaji.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shivaji-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     powerx:
       rule: "Host(`powerx.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5168,4 +5184,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50369"
+        passHostHeader: true
+        
+    pci-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50370"
+        passHostHeader: true
+        
+    shivaji-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50370"
         passHostHeader: true

@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    cola:
+      rule: "Host(`cola.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: cola-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    krona:
+      rule: "Host(`krona.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: krona-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     pci:
       rule: "Host(`pci.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5196,4 +5212,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50371"
+        passHostHeader: true
+        
+    cola-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50372"
+        passHostHeader: true
+
+    krona-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50373"
         passHostHeader: true

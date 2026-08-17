@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    spc:
+      rule: "Host(`spc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: spc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     cola:
       rule: "Host(`cola.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5224,4 +5232,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50373"
+        passHostHeader: true
+
+    spc-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50374"
         passHostHeader: true

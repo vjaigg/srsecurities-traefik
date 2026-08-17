@@ -10,6 +10,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+        
+    joel:
+      rule: "Host(`joel.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: joel-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jsam:
+      rule: "Host(`jsam.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jsam-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
 
     spc:
       rule: "Host(`spc.onlineessl.in`)"
@@ -5238,4 +5254,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50374"
+        passHostHeader: true
+
+    joel-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50375"
+        passHostHeader: true
+
+    jsam-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50376"
         passHostHeader: true

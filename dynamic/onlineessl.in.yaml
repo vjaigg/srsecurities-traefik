@@ -10,6 +10,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    rmb:
+      rule: "Host(`rmb.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rmb-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    greenbrick:
+      rule: "Host(`greenbrick.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: greenbrick-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     joel:
       rule: "Host(`joel.onlineessl.in`)"
@@ -5266,4 +5282,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50376"
+        passHostHeader: true
+
+    rmb-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50377"
+        passHostHeader: true
+
+    greenbrick-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50378"
         passHostHeader: true

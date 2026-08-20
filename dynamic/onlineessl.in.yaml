@@ -10,7 +10,15 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-
+    
+    srv:
+      rule: "Host(`srv.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: srv-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+        
     rmb:
       rule: "Host(`rmb.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5294,4 +5302,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50378"
+        passHostHeader: true
+
+    srv-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50379"
         passHostHeader: true

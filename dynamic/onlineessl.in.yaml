@@ -10,6 +10,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    ditvi:
+      rule: "Host(`ditvi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ditvi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jdt:
+      rule: "Host(`jdt.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jdt-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
     
     srv:
       rule: "Host(`srv.onlineessl.in`)"
@@ -5308,4 +5324,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50379"
+        passHostHeader: true
+
+    ditvi-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50380"
+        passHostHeader: true
+
+    jdt-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50381"
         passHostHeader: true

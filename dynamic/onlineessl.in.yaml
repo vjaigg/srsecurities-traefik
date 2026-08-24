@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    newk2:
+      rule: "Host(`newk2.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: newk2-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     ditvi:
       rule: "Host(`ditvi.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5336,4 +5344,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50381"
+        passHostHeader: true
+
+    newk2-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50382"
         passHostHeader: true

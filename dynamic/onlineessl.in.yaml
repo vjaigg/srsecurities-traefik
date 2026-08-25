@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    hps:
+      rule: "Host(`hps.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hps-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vmahesh:
+      rule: "Host(`vmahesh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vmahesh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     newk2:
       rule: "Host(`newk2.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5350,4 +5366,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50382"
+        passHostHeader: true
+
+    hps-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50383"
+        passHostHeader: true
+
+    vmahesh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50384"
         passHostHeader: true

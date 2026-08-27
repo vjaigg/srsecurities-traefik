@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    shribm:
+      rule: "Host(`shribm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: shribm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     hps:
       rule: "Host(`hps.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5378,4 +5386,10 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50384"
+        passHostHeader: true
+
+    shribm-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50385"
         passHostHeader: true

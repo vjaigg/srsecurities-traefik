@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    sohrab:
+      rule: "Host(`sohrab.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sohrab-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    trwa:
+      rule: "Host(`trwa.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: trwa-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+ 
     shribm:
       rule: "Host(`shribm.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5392,4 +5408,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50385"
+        passHostHeader: true
+
+    sohrab-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50386"
+        passHostHeader: true
+
+    trwa-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50387"
         passHostHeader: true

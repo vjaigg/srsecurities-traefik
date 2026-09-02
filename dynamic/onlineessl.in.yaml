@@ -10,6 +10,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+        
+    tazapay:
+      rule: "Host(`tazapay.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tazapay-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    broadarks:
+      rule: "Host(`broadarks.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: broadarks-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
 
     btrove:
       rule: "Host(`btrove.onlineessl.in`)"
@@ -5434,4 +5450,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50388"
+        passHostHeader: true
+        
+    tazapay-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50389"
+        passHostHeader: true
+
+    broadarks-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50390"
         passHostHeader: true

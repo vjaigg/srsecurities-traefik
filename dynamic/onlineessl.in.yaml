@@ -10,7 +10,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-
+        
     matan:
       rule: "Host(`matan.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -18,7 +18,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-
+        
     sbh:
       rule: "Host(`sbh.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5479,13 +5479,13 @@ http:
         servers:
           - url: "http://172.22.66.10:50390"
         passHostHeader: true
-
+        
 matan-svc:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50391"
         passHostHeader: true
-
+        
 sbh-svc:
       loadBalancer:
         servers:

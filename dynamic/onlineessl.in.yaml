@@ -5480,14 +5480,14 @@ http:
           - url: "http://172.22.66.10:50390"
         passHostHeader: true
         
-matan-svc:
-      loadBalancer:
-        servers:
-          - url: "http://172.22.66.10:50391"
-        passHostHeader: true
-        
-sbh-svc:
-      loadBalancer:
-        servers:
-          - url: "http://172.22.66.10:50392"
-        passHostHeader: true
+    matan-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50391"
+          passHostHeader: true
+          
+    sbh-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50392"
+          passHostHeader: true

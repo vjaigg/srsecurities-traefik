@@ -10,6 +10,22 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    matan:
+      rule: "Host(`matan.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: matan-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sbh:
+      rule: "Host(`sbh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sbh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     tazapay:
       rule: "Host(`tazapay.onlineessl.in`)"
@@ -5462,4 +5478,16 @@ http:
       loadBalancer:
         servers:
           - url: "http://172.22.66.10:50390"
+        passHostHeader: true
+
+matan-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50391"
+        passHostHeader: true
+
+sbh-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.10:50392"
         passHostHeader: true

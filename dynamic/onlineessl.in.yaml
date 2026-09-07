@@ -10,6 +10,14 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    stunicom:
+      rule: "Host(`stunicom.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: stunicom-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     matan:
       rule: "Host(`matan.onlineessl.in`)"
@@ -5490,4 +5498,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50392"
+          passHostHeader: true
+
+    stunicom-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50393"
           passHostHeader: true

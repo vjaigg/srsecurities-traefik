@@ -11,6 +11,30 @@ http:
       tls:
         certResolver: le
 
+    hbp:
+      rule: "Host(`hbp.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hbp-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sj:
+      rule: "Host(`sj.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sj-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    beshbesh:
+      rule: "Host(`beshbesh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: beshbesh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     stunicom:
       rule: "Host(`stunicom.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5504,4 +5528,22 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50393"
+          passHostHeader: true
+
+    hbp-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50394"
+          passHostHeader: true
+
+    sj-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50395"
+          passHostHeader: true
+
+    beshbesh-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50396"
           passHostHeader: true

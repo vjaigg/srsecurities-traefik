@@ -5577,3 +5577,15 @@ http:
           servers:
             - url: "http://172.22.66.10:50397"
           passHostHeader: true
+
+    divi-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50398"
+          passHostHeader: true
+
+    arkamaps-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50399"
+          passHostHeader: true

@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    divi:
+      rule: "Host(`divi.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: divi-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    arkamaps:
+      rule: "Host(`arkamaps.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: arkamaps-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     mmia:
       rule: "Host(`mmia.onlineessl.in`)"
       entryPoints: ["websecure"]

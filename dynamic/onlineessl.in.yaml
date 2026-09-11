@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    rci:
+      rule: "Host(`rci.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rci-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    gayatris:
+      rule: "Host(`gayatris.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: gayatris-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     divi:
       rule: "Host(`divi.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5588,4 +5604,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50399"
+          passHostHeader: true
+          
+    rci-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50400"
+          passHostHeader: true
+
+    gayatris-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50401"
           passHostHeader: true

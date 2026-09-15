@@ -3,6 +3,21 @@
 # Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
+    nmh:
+      rule: "Host(`nmh.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: nmh-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+    balajieng:
+      rule: "Host(`balajieng.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: balajieng-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     demo:
       rule: "Host(`demo.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5630,4 +5645,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50402"
+          passHostHeader: true
+
+    nmh-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50403"
+          passHostHeader: true
+
+    balajieng-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50404"
           passHostHeader: true

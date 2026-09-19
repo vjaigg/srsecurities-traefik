@@ -10,6 +10,30 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    bharatnext:
+      rule: "Host(`bharatnext.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bharatnext-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    deebee:
+      rule: "Host(`deebee.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: deebee-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    boatcraft:
+      rule: "Host(`boatcraft.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: boatcraft-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     snath:
       rule: "Host(`snath.onlineessl.in`)"
@@ -5672,4 +5696,22 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50405"
+          passHostHeader: true
+
+    bharatnext-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50406"
+          passHostHeader: true
+
+    deebee-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50407"
+          passHostHeader: true
+
+    boatcraft-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50408"
           passHostHeader: true

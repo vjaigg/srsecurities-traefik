@@ -10,6 +10,30 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+        
+    pil:
+      rule: "Host(`pil.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: pil-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    stvt:
+      rule: "Host(`stvt.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: stvt-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    eie:
+      rule: "Host(`eie.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: eie-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
 
     bharatnext:
       rule: "Host(`bharatnext.onlineessl.in`)"
@@ -5714,4 +5738,22 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50408"
+          passHostHeader: true
+
+    pil-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50409"
+          passHostHeader: true
+
+    stvt-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50410"
+          passHostHeader: true
+
+    eie-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50411"
           passHostHeader: true

@@ -10,6 +10,14 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
+
+    hic:
+      rule: "Host(`hic.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hic-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
         
     pil:
       rule: "Host(`pil.onlineessl.in`)"
@@ -5756,4 +5764,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50411"
+          passHostHeader: true
+
+    hic-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50412"
           passHostHeader: true

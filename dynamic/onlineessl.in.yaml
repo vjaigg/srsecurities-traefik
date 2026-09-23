@@ -18,7 +18,7 @@ http:
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
-        
+
     pil:
       rule: "Host(`pil.onlineessl.in`)"
       entryPoints: ["websecure"]

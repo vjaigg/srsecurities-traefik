@@ -11,6 +11,30 @@ http:
       tls:
         certResolver: le
 
+    aji:
+      rule: "Host(`aji.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aji-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    sriram:
+      rule: "Host(`sriram.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sriram-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    thedyers:
+      rule: "Host(`thedyers.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: thedyers-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     hic:
       rule: "Host(`hic.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5770,4 +5794,22 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50412"
+          passHostHeader: true
+
+    aji-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50413"
+          passHostHeader: true
+
+    sriram-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50414"
+          passHostHeader: true
+
+    thedyers-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50415"
           passHostHeader: true

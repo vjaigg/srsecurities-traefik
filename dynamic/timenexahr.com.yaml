@@ -3,6 +3,14 @@
 # studiodna.timenexahr.com → 172.22.66.21:8002
 http:
   routers:
+    website-timenexahr:
+      rule: "Host(`timenexahr.com`)"
+      entryPoints: ["websecure"]
+      service: website-timenexahr-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     demo-timenexahr:
       rule: "Host(`demo.timenexahr.com`)"
       entryPoints: ["websecure"]
@@ -28,6 +36,13 @@ http:
         certResolver: le
 
   services:
+    website-timenexahr-svc:
+      loadBalancer:
+        servers:
+          - url: "http://172.22.66.21:8000"
+        passHostHeader: true
+
+
     demo-timenexahr-svc:
       loadBalancer:
         servers:

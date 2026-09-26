@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    infallible:
+      rule: "Host(`infallible.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: infallible-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    hsd:
+      rule: "Host(`hsd.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: hsd-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     aji:
       rule: "Host(`aji.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5812,4 +5828,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50415"
+          passHostHeader: true
+
+    infallible-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50416"
+          passHostHeader: true
+
+    hsd-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50417"
           passHostHeader: true

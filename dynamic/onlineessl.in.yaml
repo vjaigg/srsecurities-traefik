@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    tathastu:
+      rule: "Host(`tathastu.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: tathastu-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    rlm:
+      rule: "Host(`rlm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rlm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     asa:
       rule: "Host(`asa.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5854,4 +5870,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50418"
+          passHostHeader: true
+
+    tathastu-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50419"
+          passHostHeader: true
+
+    rlm-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50420"
           passHostHeader: true

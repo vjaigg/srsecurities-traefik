@@ -11,6 +11,30 @@ http:
       tls:
         certResolver: le
 
+    jhajha:
+      rule: "Host(`jhajha.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jhajha-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    physics:
+      rule: "Host(`physics.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: physics-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vee:
+      rule: "Host(`vee.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vee-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     tathastu:
       rule: "Host(`tathastu.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5882,4 +5906,22 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50420"
+          passHostHeader: true
+
+    jhajha-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50421"
+          passHostHeader: true
+
+    physics-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50422"
+          passHostHeader: true
+
+    vee-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50423"
           passHostHeader: true

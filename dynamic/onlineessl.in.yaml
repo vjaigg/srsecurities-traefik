@@ -3,6 +3,22 @@
 # Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
+    sundari:
+      rule: "Host(`sundari.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: sundari-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    svecs:
+      rule: "Host(`svecs.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: svecs-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     demo:
       rule: "Host(`demo.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5925,3 +5941,16 @@ http:
           servers:
             - url: "http://172.22.66.10:50423"
           passHostHeader: true
+
+    sundari-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50424"
+          passHostHeader: true
+
+    svecs-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50425"
+          passHostHeader: true
+

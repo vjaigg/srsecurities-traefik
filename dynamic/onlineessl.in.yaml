@@ -27,6 +27,22 @@ http:
       tls:
         certResolver: le
 
+    vmsn:
+      rule: "Host(`vmsn.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vmsn-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    vmsn:
+      rule: "Host(`miracle.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: miracle-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     jhajha:
       rule: "Host(`jhajha.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5952,5 +5968,17 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50425"
+          passHostHeader: true
+
+    vmsn-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50426"
+          passHostHeader: true
+
+    miracle-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50427"
           passHostHeader: true
 

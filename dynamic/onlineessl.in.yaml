@@ -35,7 +35,7 @@ http:
       tls:
         certResolver: le
 
-    vmsn:
+    miracle:
       rule: "Host(`miracle.onlineessl.in`)"
       entryPoints: ["websecure"]
       service: miracle-svc

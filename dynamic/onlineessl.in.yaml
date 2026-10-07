@@ -27,6 +27,22 @@ http:
       tls:
         certResolver: le
 
+    knei-daman:
+      rule: "Host(`knei-daman.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: knei-daman-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    ita:
+      rule: "Host(`ita.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: ita-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     vmsn:
       rule: "Host(`vmsn.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -5982,3 +5998,14 @@ http:
             - url: "http://172.22.66.10:50427"
           passHostHeader: true
 
+    knei-daman-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50428"
+          passHostHeader: true
+
+    ita-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50429"
+          passHostHeader: true

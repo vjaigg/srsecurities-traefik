@@ -3,6 +3,30 @@
 # Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
+    demo:
+      rule: "Host(`demo.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: demo-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    aktm:
+      rule: "Host(`aktm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: aktm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    myra:
+      rule: "Host(`myra.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: myra-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le  
+    
     sundari:
       rule: "Host(`sundari.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -15,14 +39,6 @@ http:
       rule: "Host(`svecs.onlineessl.in`)"
       entryPoints: ["websecure"]
       service: svecs-svc
-      middlewares: ["security-headers", "compress"]
-      tls:
-        certResolver: le
-
-    demo:
-      rule: "Host(`demo.onlineessl.in`)"
-      entryPoints: ["websecure"]
-      service: demo-svc
       middlewares: ["security-headers", "compress"]
       tls:
         certResolver: le
@@ -6008,4 +6024,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50429"
+          passHostHeader: true
+
+    aktm-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50430"
+          passHostHeader: true
+
+    myra-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50431"
           passHostHeader: true

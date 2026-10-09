@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    krazy:
+      rule: "Host(`krazy.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: krazy-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     saera:
       rule: "Host(`saera.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6050,4 +6058,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50432"
+          passHostHeader: true
+
+    krazy-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50433"
           passHostHeader: true

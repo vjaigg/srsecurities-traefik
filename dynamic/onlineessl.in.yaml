@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    rcm:
+      rule: "Host(`rcm.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: rcm-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    jjtc:
+      rule: "Host(`jjtc.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: jjtc-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     dp:
       rule: "Host(`dp.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6078,4 +6094,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50434"
+          passHostHeader: true
+
+    rcm-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50435"
+          passHostHeader: true
+
+    jjtc-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50436"
           passHostHeader: true

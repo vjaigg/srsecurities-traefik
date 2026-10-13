@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    credefine:
+      rule: "Host(`credefine.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: credefine-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     rcm:
       rule: "Host(`rcm.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6106,4 +6114,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50436"
+          passHostHeader: true
+
+    credefine-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50437"
           passHostHeader: true

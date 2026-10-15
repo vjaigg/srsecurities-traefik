@@ -11,6 +11,22 @@ http:
       tls:
         certResolver: le
 
+    bigwing:
+      rule: "Host(`bigwing.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: bigwing-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    millia:
+      rule: "Host(`millia.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: millia-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     credefine:
       rule: "Host(`credefine.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6120,4 +6136,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50437"
+          passHostHeader: true
+
+    bigwing-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50438"
+          passHostHeader: true
+
+    millia-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50439"
           passHostHeader: true

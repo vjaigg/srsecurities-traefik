@@ -11,6 +11,14 @@ http:
       tls:
         certResolver: le
 
+    clf:
+      rule: "Host(`clf.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: clf-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     bigwing:
       rule: "Host(`bigwing.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6148,4 +6156,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50439"
+          passHostHeader: true
+
+    clf-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50440"
           passHostHeader: true

@@ -6185,7 +6185,7 @@ http:
             - url: "http://172.22.66.10:50441"
           passHostHeader: true
 
-    slva-svc:
+    zunpha-svc:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50442"

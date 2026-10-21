@@ -1,6 +1,5 @@
 # onlineessl.in — 326 tenant subdomains proxied to 172.22.66.10
 # Auto-generated from onlineessl_subdomain_ports.xlsx
-# Note: eonmatrix.onlineessl.in deduplicated (port 50202 wins over 50153)
 http:
   routers:
     demo:
@@ -4445,7 +4444,7 @@ http:
     eonmatrix-svc:
       loadBalancer:
         servers:
-          - url: "http://172.22.66.10:50202"
+          - url: "http://172.22.66.10:50153"
         passHostHeader: true
 
     premjyot-svc:

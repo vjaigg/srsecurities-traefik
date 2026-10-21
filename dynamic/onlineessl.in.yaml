@@ -10,6 +10,22 @@ http:
       tls:
         certResolver: le
 
+    slva:
+      rule: "Host(`slva.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: slva-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
+    zunpha:
+      rule: "Host(`zunpha.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: zunpha-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     clf:
       rule: "Host(`clf.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6161,4 +6177,16 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50440"
+          passHostHeader: true
+
+    slva-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50441"
+          passHostHeader: true
+
+    slva-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50442"
           passHostHeader: true

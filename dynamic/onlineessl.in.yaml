@@ -10,6 +10,14 @@ http:
       tls:
         certResolver: le
 
+    kothari:
+      rule: "Host(`kothari.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: kothari-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     slva:
       rule: "Host(`slva.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6189,4 +6197,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50442"
+          passHostHeader: true
+
+    kothari-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50443"
           passHostHeader: true

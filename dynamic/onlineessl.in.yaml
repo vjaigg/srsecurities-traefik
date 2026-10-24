@@ -10,6 +10,14 @@ http:
       tls:
         certResolver: le
 
+    vos:
+      rule: "Host(`vos.onlineessl.in`)"
+      entryPoints: ["websecure"]
+      service: vos-svc
+      middlewares: ["security-headers", "compress"]
+      tls:
+        certResolver: le
+
     dsse:
       rule: "Host(`dsse.onlineessl.in`)"
       entryPoints: ["websecure"]
@@ -6217,4 +6225,10 @@ http:
         loadBalancer:
           servers:
             - url: "http://172.22.66.10:50444"
+          passHostHeader: true
+
+    vos-svc:
+        loadBalancer:
+          servers:
+            - url: "http://172.22.66.10:50445"
           passHostHeader: true
